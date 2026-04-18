@@ -1,7 +1,7 @@
 import logging
 import os
 import time
-from datetime import datetime
+from datetime import datetime, timedelta
 
 import requests
 from apscheduler.schedulers.background import BackgroundScheduler
@@ -21,6 +21,8 @@ WOLT_THREAD_ID = 6
 TIMEZONE = "Europe/Bucharest"
 POLL_INTERVAL_SECONDS = 2
 REQUEST_TIMEOUT = 15
+
+TEST_MODE = True
 
 last_update_id = None
 
@@ -211,77 +213,141 @@ def delete_message(message_id):
 
 scheduler = BackgroundScheduler(timezone=TIMEZONE)
 
-# Bolt - Sunday 12:00
-scheduler.add_job(
-    send_message,
-    trigger="cron",
-    day_of_week="sun",
-    hour=12,
-    minute=0,
-    args=[BOLT_MESSAGE_1, BOLT_THREAD_ID, False],
-    id="bolt_reminder_1",
-    replace_existing=True,
-)
 
-# Bolt - Sunday 22:00
-scheduler.add_job(
-    send_message,
-    trigger="cron",
-    day_of_week="sun",
-    hour=22,
-    minute=0,
-    args=[BOLT_MESSAGE_2, BOLT_THREAD_ID, False],
-    id="bolt_reminder_2",
-    replace_existing=True,
-)
+def add_production_jobs():
+    scheduler.add_job(
+        send_message,
+        trigger="cron",
+        day_of_week="sun",
+        hour=12,
+        minute=0,
+        args=[BOLT_MESSAGE_1, BOLT_THREAD_ID, False],
+        id="bolt_reminder_1",
+        replace_existing=True,
+    )
 
-# Glovo - Sunday 12:00
-scheduler.add_job(
-    send_message,
-    trigger="cron",
-    day_of_week="sun",
-    hour=12,
-    minute=0,
-    args=[GLOVO_MESSAGE_1, GLOVO_THREAD_ID, False],
-    id="glovo_reminder_1",
-    replace_existing=True,
-)
+    scheduler.add_job(
+        send_message,
+        trigger="cron",
+        day_of_week="sun",
+        hour=22,
+        minute=0,
+        args=[BOLT_MESSAGE_2, BOLT_THREAD_ID, False],
+        id="bolt_reminder_2",
+        replace_existing=True,
+    )
 
-# Glovo - Sunday 22:00
-scheduler.add_job(
-    send_message,
-    trigger="cron",
-    day_of_week="sun",
-    hour=22,
-    minute=0,
-    args=[GLOVO_MESSAGE_2, GLOVO_THREAD_ID, False],
-    id="glovo_reminder_2",
-    replace_existing=True,
-)
+    scheduler.add_job(
+        send_message,
+        trigger="cron",
+        day_of_week="sun",
+        hour=12,
+        minute=0,
+        args=[GLOVO_MESSAGE_1, GLOVO_THREAD_ID, False],
+        id="glovo_reminder_1",
+        replace_existing=True,
+    )
 
-# Wolt - monthly on 1, 7, 15, 22 at 12:00
-scheduler.add_job(
-    send_message,
-    trigger="cron",
-    day="1,7,15,22",
-    hour=12,
-    minute=0,
-    args=[WOLT_MESSAGE_1, WOLT_THREAD_ID, False],
-    id="wolt_reminder_1",
-    replace_existing=True,
-)
+    scheduler.add_job(
+        send_message,
+        trigger="cron",
+        day_of_week="sun",
+        hour=22,
+        minute=0,
+        args=[GLOVO_MESSAGE_2, GLOVO_THREAD_ID, False],
+        id="glovo_reminder_2",
+        replace_existing=True,
+    )
 
-# Wolt - monthly on 1, 7, 15, 22 at 22:00
-scheduler.add_job(
-    send_message,
-    trigger="cron",
-    day="1,7,15,22",
-    hour=22,
-    minute=0,
-    args=[WOLT_MESSAGE_2, WOLT_THREAD_ID, False],
-    id="wolt_reminder_2",
-    replace_existing=True,
-)
+    scheduler.add_job(
+        send_message,
+        trigger="cron",
+        day="1,7,15,22",
+        hour=12,
+        minute=0,
+        args=[WOLT_MESSAGE_1, WOLT_THREAD_ID, False],
+        id="wolt_reminder_1",
+        replace_existing=True,
+    )
+
+    scheduler.add_job(
+        send_message,
+        trigger="cron",
+        day="1,7,15,22",
+        hour=22,
+        minute=0,
+        args=[WOLT_MESSAGE_2, WOLT_THREAD_ID, False],
+        id="wolt_reminder_2",
+        replace_existing=True,
+    )
+
+    logger.info("Production mode is ON: recurring reminders loaded")
+
+
+def add_test_jobs():
+    base_time = datetime.now().replace(second=0, microsecond=0)
+
+    scheduler.add_job(
+        send_message,
+        trigger="date",
+        run_date=base_time + timedelta(minutes=2),
+        args=[BOLT_MESSAGE_1, BOLT_THREAD_ID, False],
+        id="test_bolt_1",
+        replace_existing=True,
+    )
+
+    scheduler.add_job(
+        send_message,
+        trigger="date",
+        run_date=base_time + timedelta(minutes=4),
+        args=[BOLT_MESSAGE_2, BOLT_THREAD_ID, False],
+        id="test_bolt_2",
+        replace_existing=True,
+    )
+
+    scheduler.add_job(
+        send_message,
+        trigger="date",
+        run_date=base_time + timedelta(minutes=6),
+        args=[GLOVO_MESSAGE_1, GLOVO_THREAD_ID, False],
+        id="test_glovo_1",
+        replace_existing=True,
+    )
+
+    scheduler.add_job(
+        send_message,
+        trigger="date",
+        run_date=base_time + timedelta(minutes=8),
+        args=[GLOVO_MESSAGE_2, GLOVO_THREAD_ID, False],
+        id="test_glovo_2",
+        replace_existing=True,
+    )
+
+    scheduler.add_job(
+        send_message,
+        trigger="date",
+        run_date=base_time + timedelta(minutes=10),
+        args=[WOLT_MESSAGE_1, WOLT_THREAD_ID, False],
+        id="test_wolt_1",
+        replace_existing=True,
+    )
+
+    scheduler.add_job(
+        send_message,
+        trigger="date",
+        run_date=base_time + timedelta(minutes=12),
+        args=[WOLT_MESSAGE_2, WOLT_THREAD_ID, False],
+        id="test_wolt_2",
+        replace_existing=True,
+    )
+
+    logger.info("TEST_MODE is ON: scheduled 6 test reminders in the next 12 minutes")
+
+
+if TEST_MODE:
+    add_test_jobs()
+else:
+    add_production_jobs()
 
 # =========================
 # CUSTOM ONE-TIME REMINDERS
@@ -325,9 +391,7 @@ def handle_updates():
     global last_update_id
 
     url = f"https://api.telegram.org/bot{BOT_TOKEN}/getUpdates"
-    params = {
-        "timeout": 10,
-    }
+    params = {"timeout": 10}
 
     if last_update_id is not None:
         params["offset"] = last_update_id + 1
