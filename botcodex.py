@@ -1,7 +1,7 @@
 import logging
 import os
 import time
-from datetime import datetime, timedelta
+from datetime import datetime
 
 import requests
 from apscheduler.schedulers.background import BackgroundScheduler
@@ -22,7 +22,7 @@ TIMEZONE = "Europe/Bucharest"
 POLL_INTERVAL_SECONDS = 2
 REQUEST_TIMEOUT = 15
 
-TEST_MODE = True
+TEST_MODE = False
 
 last_update_id = None
 
@@ -206,7 +206,6 @@ def delete_message(message_id):
     except Exception as exc:
         logger.exception("Unexpected error while deleting message: %s", exc)
 
-
 # =========================
 # SCHEDULER
 # =========================
@@ -284,71 +283,7 @@ def add_production_jobs():
     logger.info("Production mode is ON: recurring reminders loaded")
 
 
-def add_test_jobs():
-    now = datetime.now(scheduler.timezone)
-    base_time = now.replace(second=0, microsecond=0)
-
-    scheduler.add_job(
-        send_message,
-        trigger="date",
-        run_date=base_time + timedelta(minutes=2),
-        args=[BOLT_MESSAGE_1, BOLT_THREAD_ID, False],
-        id="test_bolt_1",
-        replace_existing=True,
-    )
-
-    scheduler.add_job(
-        send_message,
-        trigger="date",
-        run_date=base_time + timedelta(minutes=4),
-        args=[BOLT_MESSAGE_2, BOLT_THREAD_ID, False],
-        id="test_bolt_2",
-        replace_existing=True,
-    )
-
-    scheduler.add_job(
-        send_message,
-        trigger="date",
-        run_date=base_time + timedelta(minutes=6),
-        args=[GLOVO_MESSAGE_1, GLOVO_THREAD_ID, False],
-        id="test_glovo_1",
-        replace_existing=True,
-    )
-
-    scheduler.add_job(
-        send_message,
-        trigger="date",
-        run_date=base_time + timedelta(minutes=8),
-        args=[GLOVO_MESSAGE_2, GLOVO_THREAD_ID, False],
-        id="test_glovo_2",
-        replace_existing=True,
-    )
-
-    scheduler.add_job(
-        send_message,
-        trigger="date",
-        run_date=base_time + timedelta(minutes=10),
-        args=[WOLT_MESSAGE_1, WOLT_THREAD_ID, False],
-        id="test_wolt_1",
-        replace_existing=True,
-    )
-
-    scheduler.add_job(
-        send_message,
-        trigger="date",
-        run_date=base_time + timedelta(minutes=12),
-        args=[WOLT_MESSAGE_2, WOLT_THREAD_ID, False],
-        id="test_wolt_2",
-        replace_existing=True,
-    )
-
-    logger.info("TEST_MODE is ON: scheduled 6 test reminders in the next 12 minutes")
-
-
-
-if TEST_MODE:
-    add_test_jobs()
-else:
+if not TEST_MODE:
     add_production_jobs()
 
 # =========================
@@ -455,18 +390,13 @@ def main():
     logger.info("Bot is running with timezone %s", TIMEZONE)
 
     try:
-        if TEST_MODE:
-            while True:
-                time.sleep(60)
-        else:
-            while True:
-                handle_updates()
-                time.sleep(POLL_INTERVAL_SECONDS)
+        while True:
+            handle_updates()
+            time.sleep(POLL_INTERVAL_SECONDS)
     except KeyboardInterrupt:
         logger.info("Bot stopped manually")
     finally:
         scheduler.shutdown()
-
 
 
 if __name__ == "__main__":
