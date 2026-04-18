@@ -285,7 +285,8 @@ def add_production_jobs():
 
 
 def add_test_jobs():
-    base_time = datetime.now().replace(second=0, microsecond=0)
+    now = datetime.now(scheduler.timezone)
+    base_time = now.replace(second=0, microsecond=0)
 
     scheduler.add_job(
         send_message,
@@ -342,6 +343,7 @@ def add_test_jobs():
     )
 
     logger.info("TEST_MODE is ON: scheduled 6 test reminders in the next 12 minutes")
+
 
 
 if TEST_MODE:
