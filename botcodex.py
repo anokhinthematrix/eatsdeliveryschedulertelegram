@@ -455,13 +455,18 @@ def main():
     logger.info("Bot is running with timezone %s", TIMEZONE)
 
     try:
-        while True:
-            handle_updates()
-            time.sleep(POLL_INTERVAL_SECONDS)
+        if TEST_MODE:
+            while True:
+                time.sleep(60)
+        else:
+            while True:
+                handle_updates()
+                time.sleep(POLL_INTERVAL_SECONDS)
     except KeyboardInterrupt:
         logger.info("Bot stopped manually")
     finally:
         scheduler.shutdown()
+
 
 
 if __name__ == "__main__":
