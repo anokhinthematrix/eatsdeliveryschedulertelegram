@@ -125,7 +125,9 @@ WOLT_MESSAGE_1 = """
 
 📅 Țineți minte calendarul la Wolt pe care se calculează fiecare săptămână a lunii: <b>01–07 | 08–15 | 16–22 | 23–01</b>. Zilele în care se dă reset sunt: <b>01, 07, 15, 22</b>, în fiecare lună, la final de zi <b>(23:59)</b>.
 
-🤝 Mulțumim de colaborare și un final de săptămână liniștit! 🙏🤍
+✋ Încă un lucru important de reținut (știm, v-au zăpăcit și pe voi, și pe noi 😅): La Wolt, în zilele 2-8-16-23 (cu o zi după reset) nu faceți nicio depunere, altfel se trage de două ori (și din raport, și depunerea voastră).
+
+🤝 Mulțumim de colaborare și o zi cu spor! 🙏🤍
 """
 
 WOLT_MESSAGE_2 = """
@@ -140,10 +142,11 @@ Resetarea balanței cash la Wolt are loc la ora <b>23:59</b>, după care începe
 📌 <b>Asigurați-vă că:</b>
 • ați depus suma <b>integrală</b> până în ora <b>23:59</b>
 • balanța este <b>0</b>
+• nu depuneți în ziua următoare
 
 ⛔ Nu lăsați pe ultima secundă!
 
-🤝 Mulțumim pentru colaborare și înțelegere!
+🤝 Mulțumim pentru colaborare și înțelegere - o seară liniștită! 🙏🤍
 """
 
 # =========================
