@@ -12,7 +12,7 @@ from apscheduler.schedulers.background import BackgroundScheduler
 
 BOT_TOKEN = os.getenv("BOT_TOKEN")
 CHAT_ID = os.getenv("CHAT_ID")
-ADMIN_IDS = [804349433]
+ADMIN_IDS = [804349433, 8711909473]
 
 BOLT_THREAD_ID = 10
 GLOVO_THREAD_ID = 12
@@ -51,15 +51,31 @@ BOLT_MESSAGE_1 = """
 
 🔄 <b>În seara asta la ora 23:59 se dă reset la balanța cash de pe Bolt, după care începe o nouă săptămână fiscală. 📈</b> 💱️
 
-⚠️ Orice sumă <b>NU</b> e acoperită până în ora 23:59 <i>(miez de noapte către ziua de luni)</i> se va trage din următorul raport (<u><b>bani impozitabili</b></u>) - 👎
+⚠ Orice sumă <b>NU</b> e acoperită până în ora 23:59 <i>(miez de noapte către ziua de luni)</i> se va trage din următorul raport (<u><b>bani impozitabili</b></u>) - 👎
 
 📌 Așadar, asigurați-vă că aveți balanța numerar pe 0 înainte de resetare, ca să nu existe probleme și confuzii. 👌✌️
 
 📊 Țineți minte că, la Bolt, ar trebui să aveți balanța pe 0 la finalul zilei de duminică, săptămână de săptămână!
 
-✅ Puteți face depunerea direct din aplicația Bolt Courier (actualizare în mai puțin de o oră). Dacă întâmpinați dificultăți cu depunerea, contactați asistența din aplicație -/- scrieți pe grupul Bolt/Suport General -/- cereți ajutorul unui helper.
+✅ Puteți face depunerea direct din aplicația <a href="https://youtube.com/shorts/5d296X-pYqk?feature=share">Bolt Courier</a> (actualizare în mai puțin de o oră). Dacă întâmpinați dificultăți cu depunerea, contactați asistența din aplicație -/- scrieți pe grupul Bolt/Suport General -/- cereți ajutorul unui helper.
 
 🤝 Mulțumim de colaborare și un final de săptămână liniștit! 🙏🤍
+
+
+
+🇺🇸 EN:
+
+🔄 <b>Tonight at 23:59 the cash balance on Bolt will be reset, after which a new fiscal week begins. 📈</b> 💱️
+
+⚠ Any amount <b>NOT</b> covered by 23:59 <i>(midnight to Monday)</i> will be deducted from the next report (<u><b>taxable money</b></u>) - 👎
+
+📌 Therefore, make sure your cash balance is 0 before the reset, so there are no issues and confusion. 👌✌️
+
+📊 Keep in mind that, on Bolt, you should have your balance at 0 at the end of Sunday, on a weekly basis!
+
+✅ You can make the deposit directly from the <a href="https://youtube.com/shorts/5d296X-pYqk?feature=share">Bolt Courier App</a> (updated in less than an hour). If you encounter difficulties with the deposit, contact support in the app -/- write in the Bolt/General Support group -/- ask a helper for assistance.
+
+🤝 Thank you for your collaboration and have a peaceful end of the week! 🙏🤍
 """
 
 BOLT_MESSAGE_2 = """🚛 <b>BOLT – Reminder FINAL</b> ⏰
@@ -78,13 +94,32 @@ Resetarea balanței cash la Bolt are loc la ora <b>23:59</b>, după care începe
 ⛔ Nu lăsați pe ultima secundă!
 
 🤝 Mulțumim pentru colaborare și înțelegere!
+
+
+
+🇺🇸 EN:
+
+⚠️ <b>Attention!</b>
+The cash balance reset at Bolt takes place at <b>23:59</b>, after which a new fiscal week begins.
+
+❗ If you still have a negative cash balance by the end of the day:
+➡️ they will be deducted from the next report
+➡️ <u><b>taxable money</b></u> ❌
+
+📌 <b>Make sure that:</b>
+• you have deposited the <b>full amount</b> by <b>23:59</b>
+• the balance is <b>0</b>
+
+⛔ Do not leave it to the last second!
+
+🤝 Thank you for your collaboration and understanding!
 """
 
 GLOVO_MESSAGE_1 = """
 
 🔄 <b>În seara asta la ora 23:59 se dă reset la balanța cash de pe Glovo, după care începe o nouă săptămână fiscală. 📈</b> 💱️
 
-⚠️ Orice sumă <b>NU</b> e acoperită până în ora <b>23:59</b> <i>(miez de noapte către ziua de luni)</i> se va trage din următorul raport (<u><b>bani impozitabili</b></u>) - 👎
+⚠ Orice sumă <b>NU</b> e acoperită până în ora <b>23:59</b> <i>(miez de noapte către ziua de luni)</i> se va trage din următorul raport (<u><b>bani impozitabili</b></u>) - 👎
 
 📌 Așadar, asigurați-vă că aveți balanța numerar pe 0 înainte de resetare, ca să nu existe probleme și confuzii. 👌✌️
 
@@ -93,6 +128,22 @@ GLOVO_MESSAGE_1 = """
 ✅ Puteți face depunerea direct prin <a href="https://www.selfpay.ro/localizare/">SelfPay</a> (actualizare instantă). Dacă întâmpinați dificultăți cu depunerea, contactați asistența din aplicație -/- scrieți pe grupul Glovo sau Suport General -/- cereți ajutorul unui helper.
 
 🤝 Mulțumim de colaborare și un final de săptămână liniștit! 🙏🤍
+
+
+
+🇺🇸 EN:
+
+🔄 <b>Tonight at 23:59 the cash balance on Glovo will be reset, after which a new fiscal week begins. 📈</b> 💱️
+
+⚠ Any amount <b>NOT</b> covered by <b>23:59</b> <i>(midnight to Monday)</i> will be deducted from the next report (<u><b>taxable money</b></u>) - 👎
+
+📌 Therefore, make sure your cash balance is 0 before the reset, so there are no issues or confusion. 👌✌️
+
+📊 Do not forget that at Glovo, the reset may be delayed until 14:00 on Monday (this depends on the platform, not on us) – therefore we recommend keeping the balance below the threshold of <b>200</b> (negative) during that interval to avoid having amounts deducted from the upcoming report, and later from that week’s payment.
+
+✅ You can make the deposit directly via <a href="https://www.selfpay.ro/localizare/">SelfPay</a> (instant update). If you encounter difficulties with the deposit, contact support in the app -/- write in the Glovo group or General Support -/- ask a helper for assistance.
+
+🤝 Thank you for your collaboration and have a peaceful end of the week! 🙏🤍
 """
 
 GLOVO_MESSAGE_2 = """🍔 <b>GLOVO – Reminder FINAL</b> ⏰
@@ -111,23 +162,61 @@ Resetarea balanței cash la Glovo are loc la ora <b>23:59</b>, după care încep
 📊 Nu uitați că la Glovo, resetarea poate fi decalată până în ora 14:00 din ziua de Luni (ține de platformă, nu de noi) - de aceea recomandăm să mențineți balanța sub pragul de 200 în acel interval pentru a nu vi se trage din raportul care urmează, și ulterior din plata pe acea săptămână.
 
 🤝 Mulțumim pentru colaborare și înțelegere - să aveți o încheiere de săptămână liniștită și la zi cu toate! 😌🙏
+
+
+
+🇺🇸 EN:
+
+⚠️ <b>Attention!</b>
+The cash balance reset at Glovo takes place at <b>23:59</b>, after which a new fiscal week begins.
+
+❗ If you still have a negative cash balance by the end of the day:
+➡️ they will be deducted from the next report
+➡️ <u><b>taxable money</b></u> ❌
+
+📌 <b>Make sure that:</b>
+• you have deposited the <b>full amount</b> by <b>23:59</b>
+• the balance is <b>0</b>
+
+📊 Do not forget that at Glovo, the reset may be delayed until 14:00 on Monday (this depends on the platform, not on us) – therefore we recommend keeping the balance below 200 during that interval to avoid having amounts deducted from the upcoming report, and later from that week’s payment.
+
+🤝 Thank you for your collaboration and understanding – have a calm end of the week, and up to date with everything! 😌🙏
+
 """
 
 WOLT_MESSAGE_1 = """
 
 🔄 <b>În seara asta la ora 23:59 se dă reset la balanța cash de pe Wolt, după care începe o nouă săptămână fiscală. 📈</b> 💱
 
-⚠️ Orice sumă <b>NU</b> e acoperită până în ora <b>23:59</b> <i>(miez de noapte către ziua de luni)</i> se va trage din următorul raport (<u><b>bani impozitabili</b></u>) - 👎
+⚠ Orice sumă <b>NU</b> e acoperită până în ora <b>23:59</b> <i>(miez de noapte către următoarea zi)</i> se va trage din următorul raport (<u><b>bani impozitabili</b></u>) - 👎
 
 📌 Așadar, asigurați-vă că aveți balanța numerar pe 0 înainte de resetare, ca să nu existe probleme și confuzii. 👌✌️
 
 ✅ Puteți face depunerea direct prin <a href="https://youtube.com/shorts/p_dF5jPabLc?feature=share">Aircash</a> (actualizare instantă). Dacă întâmpinați dificultăți cu depunerea, contactați asistența din aplicație -/- scrieți pe grupul Wolt sau Suport General -/- cereți ajutorul unui helper.
 
-📅 Țineți minte calendarul la Wolt pe care se calculează fiecare săptămână a lunii: <b>01–07 | 08–15 | 16–22 | 23–01</b>. Zilele în care se dă reset sunt: <b>01, 07, 15, 22</b>, în fiecare lună, la final de zi <b>(23:59)</b>.
+📅 Țineți minte calendarul la Wolt pe care se calculează fiecare săptămână fiscală a lunii: <b>01–07 | 08–15 | 16–22 | 23–01</b>. Zilele în care se dă reset sunt: <b>01, 07, 15, 22</b>, în fiecare lună, la final de zi <b>(23:59)</b>.
 
 ✋ Încă un lucru important de reținut (știm, v-au zăpăcit și pe voi, și pe noi 😅): La Wolt, în zilele 2-8-16-23 (cu o zi după reset) nu faceți nicio depunere, altfel se trage de două ori (și din raport, și depunerea voastră).
 
 🤝 Mulțumim de colaborare și o zi cu spor! 🙏🤍
+
+
+
+🇺🇸 EN:
+
+🔄 <b>Tonight at 23:59 the cash balance on Wolt will be reset, after which a new fiscal week begins. 📈</b> 💱
+
+⚠ Any amount <b>NOT</b> covered by <b>23:59</b> <i>(midnight to the following day)</i> will be deducted from the next report (<u><b>taxable money</b></u>) - 👎
+
+📌 Therefore, make sure your cash balance is 0 before the reset, so there are no issues or confusion. 👌✌️
+
+✅ You can make the deposit directly via <a href="https://youtube.com/shorts/p_dF5jPabLc?feature=share">Aircash</a> (instant update). If you encounter difficulties with the deposit, contact support in the app -/- write in the Wolt group or General Support -/- ask a helper for assistance.
+
+📅 Keep in mind the Wolt schedule used to calculate each fiscal week of the month: <b>01–07 | 08–15 | 16–22 | 23–01</b>. The reset days are: <b>01, 07, 15, 22</b>, every month, at the end of the day <b>(23:59)</b>.
+
+✋ One more important thing to remember (we know, it’s confusing for both you and us 😅): At Wolt, on days 2-8-16-23 (one day after the reset) do not make any deposit, otherwise it will be deducted twice (both from the report and your deposit).
+
+🤝 Thank you for your collaboration and have a productive day! 🙏🤍
 """
 
 WOLT_MESSAGE_2 = """
@@ -142,11 +231,86 @@ Resetarea balanței cash la Wolt are loc la ora <b>23:59</b>, după care începe
 📌 <b>Asigurați-vă că:</b>
 • ați depus suma <b>integrală</b> până în ora <b>23:59</b>
 • balanța este <b>0</b>
-• nu depuneți în ziua următoare
+• nu depuneți în ziua următoare (banii pot fi opriți de 2 ori)
 
 ⛔ Nu lăsați pe ultima secundă!
 
 🤝 Mulțumim pentru colaborare și înțelegere - o seară liniștită! 🙏🤍
+
+
+
+🇺🇸 EN:
+
+⚠️ <b>Attention!</b>
+The cash balance reset at Wolt takes place at <b>23:59</b>, after which a new fiscal week begins.
+
+❗ If you still have a negative cash balance by the end of the day:
+➡️ they will be deducted from the next report
+➡️ <u><b>taxable money</b></u> ❌
+
+📌 <b>Make sure that:</b>
+• you have deposited the <b>full amount</b> by <b>23:59</b>
+• the balance is <b>0</b>
+• you do not deposit on the following day (the money could be deducted twice)
+
+⛔ Do not leave it to the last second!
+
+🤝 Thank you for your collaboration and understanding – have a peaceful evening! 🙏🤍
+"""
+
+GLOVO_CALENDAR_JOI = """
+
+🍔 <b>GLOVO - Orele disponibile pentru o nouă săptămână vor fi disponibile în curând în aplicație! </b>⏰
+
+📌 Calendarul la Glovo se actualizează în fiecare Joi și va fi disponibil de astăzi, pentru toată săptămâna viitoare, Luni-Duminică.
+
+🏅 În funcție de nivelul pe care îl aveți la Glovo, asta va determina și ora la care veți avea acces la calendar:
+
+Nivelul 1 - 16:00
+Nivelul 2 - 16:30
+Nivelul 3 - 17:00
+Nivelul 4 - 17:30
+Nivelul 5 - 18:00
+Nivelul 6 - 18:30
+Nivelul 7 - 19:00
+Nivelul 8 - 19:30
+Nivelul 9 - 20:00
+Nivelul 10 - 20:30
+Nivelul 11 - 18:00
+Nivelul 12 - 21:00
+Nivelul Diamant - 15:00
+Nivel Gold - 16:00
+
+❗ <b>selectați doar intervalele pe care știți sigur că le puteți realiza;</b>
+❗ <b>nu lăsați orele de rezervare pe ultimul moment - fiind o perioadă destul de aglomerată și mulți curieri activi, riscați să nu prindeți orele dorite mai târziu.</b>
+
+
+
+🇺🇸 EN:
+
+🍔 <b>GLOVO - The schedule (available hours) for the next week will soon be available in the app! </b>⏰
+
+📌 At Glovo, the schedule is updated every Thursday and will be available starting today, for the entire next week, Monday–Sunday.
+
+🏅 Depending on your level in the Glovo app, this will also determine the hour at which you will have access to the schedule:
+
+Level 1 - 16:00
+Level 2 - 16:30
+Level 3 - 17:00
+Level 4 - 17:30
+Level 5 - 18:00
+Level 6 - 18:30
+Level 7 - 19:00
+Level 8 - 19:30
+Level 9 - 20:00
+Level 10 - 20:30
+Level 11 - 18:00
+Level 12 - 21:00
+Diamond Level - 15:00
+Gold Level - 16:00
+
+❗ <b>select only the time slots that you are sure you can complete;</b>
+❗ <b>do not leave booking hours to the last moment – as it is a fairly busy period with many active couriers, you risk not having your desired hours available later.</b>
 """
 
 # =========================
@@ -280,6 +444,17 @@ def add_production_jobs():
         minute=0,
         args=[WOLT_MESSAGE_2, WOLT_THREAD_ID, False],
         id="wolt_reminder_2",
+        replace_existing=True,
+    )
+
+     scheduler.add_job(
+        send_message,
+        trigger="cron",
+        day_of_week="thu",
+        hour=15,
+        minute=50,
+        args=[GLOVO_CALENDAR_JOI, GLOVO_THREAD_ID, False],
+        id="thursday_reminder",
         replace_existing=True,
     )
 
