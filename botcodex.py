@@ -447,7 +447,7 @@ def add_production_jobs():
         replace_existing=True,
     )
 
-     scheduler.add_job(
+    scheduler.add_job(
         send_message,
         trigger="cron",
         day_of_week="thu",
