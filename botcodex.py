@@ -89,7 +89,7 @@ Resetarea balanței cash la Bolt are loc la ora <b>23:59</b>, după care începe
 
 📌 <b>Asigurați-vă că:</b>
 • ați depus suma <b>integrală</b> până în ora <b>23:59</b>
-• balanța este <b>0</b>
+• balanța este <b>0</b> în momentul de reset (ora 23:59)
 
 ⛔ Nu lăsați pe ultima secundă!
 
@@ -108,7 +108,7 @@ The cash balance reset at Bolt takes place at <b>23:59</b>, after which a new fi
 
 📌 <b>Make sure that:</b>
 • you have deposited the <b>full amount</b> by <b>23:59</b>
-• the balance is <b>0</b>
+• the balance is <b>0</b> at the moment of the reset (23:59 tonight)
 
 ⛔ Do not leave it to the last second!
 
@@ -157,7 +157,7 @@ Resetarea balanței cash la Glovo are loc la ora <b>23:59</b>, după care încep
 
 📌 <b>Asigurați-vă că:</b>
 • ați depus suma <b>integrală</b> până în ora <b>23:59</b>
-• balanța este <b>0</b>
+• balanța este <b>0</b> în momentul de reset (ora 23:59)
 
 📊 Nu uitați că la Glovo, resetarea poate fi decalată până în ora 14:00 din ziua de Luni (ține de platformă, nu de noi) - de aceea recomandăm să mențineți balanța sub pragul de 200 în acel interval pentru a nu vi se trage din raportul care urmează, și ulterior din plata pe acea săptămână.
 
@@ -176,7 +176,7 @@ The cash balance reset at Glovo takes place at <b>23:59</b>, after which a new f
 
 📌 <b>Make sure that:</b>
 • you have deposited the <b>full amount</b> by <b>23:59</b>
-• the balance is <b>0</b>
+• • the balance is <b>0</b> at the moment of the reset (23:59 tonight)
 
 📊 Do not forget that at Glovo, the reset may be delayed until 14:00 on Monday (this depends on the platform, not on us) – therefore we recommend keeping the balance below 200 during that interval to avoid having amounts deducted from the upcoming report, and later from that week’s payment.
 
@@ -194,9 +194,9 @@ WOLT_MESSAGE_1 = """
 
 ✅ Puteți face depunerea direct prin <a href="https://youtube.com/shorts/p_dF5jPabLc?feature=share">Aircash</a> (actualizare instantă). Dacă întâmpinați dificultăți cu depunerea, contactați asistența din aplicație -/- scrieți pe grupul Wolt sau Suport General -/- cereți ajutorul unui helper.
 
-📅 Țineți minte calendarul la Wolt pe care se calculează fiecare săptămână fiscală a lunii: <b>01–07 | 08–15 | 16–22 | 23–01</b>. Zilele în care se dă reset sunt: <b>01, 07, 15, 22</b>, în fiecare lună, la final de zi <b>(23:59)</b>.
+📅 Țineți minte calendarul la Wolt pe care se calculează fiecare săptămână fiscală a lunii: <b>01–07 | 08–15 | 16–22 | 23–ultima zi a lunii</b>. Zilele în care se dă reset sunt în următorul format calendaristic, lună de lună: <b>07, 15, 22 și ultima zi a lunii (28/29/30/31)</b>, la încheierea zilei <b>(23:59)</b>.
 
-✋ Încă un lucru important de reținut (știm, v-au zăpăcit și pe voi, și pe noi 😅): La Wolt, în zilele 2-8-16-23 (cu o zi după reset) nu faceți nicio depunere, altfel se trage de două ori (și din raport, și depunerea voastră).
+✋ Încă un lucru important de reținut (știm, v-au zăpăcit și pe voi, și pe noi 😅): La Wolt, în zilele 8-16-23 și în <b>prima zi a lunii următoare</b> (cu o zi după reset) nu faceți nicio depunere, altfel se trage de două ori (și din raport, și depunerea voastră).
 
 🤝 Mulțumim de colaborare și o zi cu spor! 🙏🤍
 
@@ -212,9 +212,9 @@ WOLT_MESSAGE_1 = """
 
 ✅ You can make the deposit directly via <a href="https://youtube.com/shorts/p_dF5jPabLc?feature=share">Aircash</a> (instant update). If you encounter difficulties with the deposit, contact support in the app -/- write in the Wolt group or General Support -/- ask a helper for assistance.
 
-📅 Keep in mind the Wolt schedule used to calculate each fiscal week of the month: <b>01–07 | 08–15 | 16–22 | 23–01</b>. The reset days are: <b>01, 07, 15, 22</b>, every month, at the end of the day <b>(23:59)</b>.
+📅 Keep in mind the Wolt schedule used to calculate each fiscal week of the month: <b>01–07 | 08–15 | 16–22 | 23–last day of the month</b>. The reset days are: <b>07, 15, 22 and the last day of the month</b>, every month, at the end of the day <b>(23:59)</b>.
 
-✋ One more important thing to remember (we know, it’s confusing for both you and us 😅): At Wolt, on days 2-8-16-23 (one day after the reset) do not make any deposit, otherwise it will be deducted twice (both from the report and your deposit).
+✋ One more important thing to remember (we know, it’s confusing for both you and us 😅): At Wolt, on days 8-16-23 and on the <b>first day of the following month</b> (one day after the reset), do not make any deposit, otherwise it will be deducted twice (both from the report and your deposit).
 
 🤝 Thank you for your collaboration and have a productive day! 🙏🤍
 """
@@ -230,8 +230,8 @@ Resetarea balanței cash la Wolt are loc la ora <b>23:59</b>, după care începe
 
 📌 <b>Asigurați-vă că:</b>
 • ați depus suma <b>integrală</b> până în ora <b>23:59</b>
-• balanța este <b>0</b>
-• nu depuneți în ziua următoare (banii pot fi opriți de 2 ori)
+• balanța este <b>0</b> în momentul de reset (ora 23:59)
+• nu depuneți în ziua următoare a resetului (în niciuna din zilele 01 | 08 | 16 | 23 (banii pot fi opriți de 2 ori) - tot Wolt și încărcăturile lor care ne încurcă și pe noi. Dar hei, plătesc bine (:
 
 ⛔ Nu lăsați pe ultima secundă!
 
@@ -250,8 +250,8 @@ The cash balance reset at Wolt takes place at <b>23:59</b>, after which a new fi
 
 📌 <b>Make sure that:</b>
 • you have deposited the <b>full amount</b> by <b>23:59</b>
-• the balance is <b>0</b>
-• you do not deposit on the following day (the money could be deducted twice)
+• the balance is <b>0</b> at the moment of the reset (23:59 tonight)
+• you do not deposit on the following day after the reset day (in none of the following days: 01 | 08 | 16 | 23 (the money could be deducted twice) - again, Wolt and their problems, troubling us too. But hey, they pay well (:
 
 ⛔ Do not leave it to the last second!
 
@@ -428,7 +428,7 @@ def add_production_jobs():
     scheduler.add_job(
         send_message,
         trigger="cron",
-        day="1,7,15,22",
+        day="7,15,22,last",
         hour=12,
         minute=0,
         args=[WOLT_MESSAGE_1, WOLT_THREAD_ID, False],
@@ -439,7 +439,7 @@ def add_production_jobs():
     scheduler.add_job(
         send_message,
         trigger="cron",
-        day="1,7,15,22",
+        day="7,15,22,last",
         hour=22,
         minute=0,
         args=[WOLT_MESSAGE_2, WOLT_THREAD_ID, False],
