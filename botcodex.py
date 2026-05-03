@@ -51,13 +51,21 @@ BOLT_MESSAGE_1 = """
 
 🔄 <b>În seara asta la ora 23:59 se dă reset la balanța cash de pe Bolt, după care începe o nouă săptămână fiscală. 📈</b> 💱️
 
-⚠ Orice sumă <b>NU</b> e acoperită până în ora 23:59 <i>(miez de noapte către ziua de luni)</i> se va trage din următorul raport (<u><b>bani impozitabili</b></u>) - 👎
+⚠ Orice sumă rămasă în balanță la ora <b>23:59</b> (miez de noapte către următoarea zi) se va trage din următorul raport (bani impozitabili), iar curierii cu restanțe pot pierde prioritate la comenzi - 👎
 
 📌 Așadar, asigurați-vă că aveți balanța numerar pe 0 înainte de resetare, ca să nu existe probleme și confuzii. 👌✌️
 
-📊 Țineți minte că, la Bolt, ar trebui să aveți balanța pe 0 la finalul zilei de duminică, săptămână de săptămână!
+📊 Țineți minte că, la Bolt, ar trebui să aveți balanța pe 0 la finalul zilei de duminică, săptămână de săptămână! (e ok și dacă e pe pozitiv, va rămâne la voi în balanță)
 
-✅ Puteți face depunerea direct din aplicația <a href="https://youtube.com/shorts/5d296X-pYqk?feature=share">Bolt Courier</a> (actualizare în mai puțin de o oră). Dacă întâmpinați dificultăți cu depunerea, contactați asistența din aplicație -/- scrieți pe grupul Bolt/Suport General -/- cereți ajutorul unui helper.
+✅ Puteți face depunerea direct din aplicația <a href="https://youtube.com/shorts/5d296X-pYqk?feature=share">Bolt Courier</a> (actualizare în doar câteva minute).
+
+❌ <b>NU</b> faceți depunerea prin metoda transfer bancar, pentru că durează 24-48 de ore și nu se procesează în zilele de weekend.
+
+🗣️ Dacă întâmpinați dificultăți cu depunerea:
+
+1. Contactați asistența din aplicație -/- dacă asistența nu vă ajută 👇
+2. scrieți pe grupul Bolt/Suport General -/- dacă nici așa 👇
+3. cereți ajutorul unui helper. Suntem aici să vă ajutăm, dar vă rugăm să aveți răbdare. 😌🙏
 
 🤝 Mulțumim de colaborare și un final de săptămână liniștit! 🙏🤍
 
@@ -65,17 +73,21 @@ BOLT_MESSAGE_1 = """
 
 🇺🇸 EN:
 
-🔄 <b>Tonight at 23:59 the cash balance on Bolt will be reset, after which a new fiscal week begins. 📈</b> 💱️
+🔄 <b>Tonight at 23:59, the cash balance on Bolt will be reset, after which a new fiscal week begins. 📈</b> 💱️
 
-⚠ Any amount <b>NOT</b> covered by 23:59 <i>(midnight to Monday)</i> will be deducted from the next report (<u><b>taxable money</b></u>) - 👎
+⚠ Any amount remaining in the balance at <b>23:59</b> (midnight going into the next day) will be deducted from the next report (taxable money), and couriers with outstanding balances may lose order priority - 👎
 
-📌 Therefore, make sure your cash balance is 0 before the reset, so there are no issues and confusion. 👌✌️
+📌 Therefore, make sure your cash balance is 0 before the reset to avoid any issues or confusion. 👌✌️
 
-📊 Keep in mind that, on Bolt, you should have your balance at 0 at the end of Sunday, on a weekly basis!
+📊 Keep in mind that on Bolt, you should have your balance at 0 at the end of Sunday, week after week! (it’s also okay if it’s positive, it will remain in your balance)
 
-✅ You can make the deposit directly from the <a href="https://youtube.com/shorts/5d296X-pYqk?feature=share">Bolt Courier App</a> (updated in less than an hour). If you encounter difficulties with the deposit, contact support in the app -/- write in the Bolt/General Support group -/- ask a helper for assistance.
+✅ You can make the deposit directly from the <a href="https://youtube.com/shorts/5d296X-pYqk?feature=share">Bolt Courier</a> app (updated in just a few minutes).
 
-🤝 Thank you for your collaboration and have a peaceful end of the week! 🙏🤍
+❌ <b>DO NOT</b> make the deposit via bank transfer, as it takes 24–48 hours and is not processed on weekends.
+
+🗣️ If you encounter difficulties with the deposit, contact support in the app -/- message the Bolt/General Support group -/- ask a helper for assistance. We are here to help you, but please be patient.
+
+🤝 Thank you for your cooperation and have a მშვიდ end of the week! 🙏🤍
 """
 
 BOLT_MESSAGE_2 = """🚛 <b>BOLT – Reminder FINAL</b> ⏰
@@ -125,7 +137,13 @@ GLOVO_MESSAGE_1 = """
 
 📊 Nu uitați că la Glovo, resetarea poate fi decalată până în ora 14:00 din ziua de Luni (ține de platformă, nu de noi) - de aceea recomandăm să mențineți balanța sub pragul de <b>200</b> (pe minus) în acel interval pentru a nu vi se trage din raportul care urmează, și ulterior din plata pe acea săptămână.
 
-✅ Puteți face depunerea direct prin <a href="https://www.selfpay.ro/localizare/">SelfPay</a> (actualizare instantă). Dacă întâmpinați dificultăți cu depunerea, contactați asistența din aplicație -/- scrieți pe grupul Glovo sau Suport General -/- cereți ajutorul unui helper.
+✅ Puteți face depunerea direct prin <a href="https://www.selfpay.ro/localizare/">SelfPay</a> (actualizare instantă).
+
+🗣️ Dacă întâmpinați dificultăți cu depunerea:
+
+1. Contactați asistența din aplicație -/- dacă asistența nu vă ajută 👇
+2. scrieți pe grupul Bolt/Suport General -/- dacă nici așa 👇
+3. cereți ajutorul unui helper. Suntem aici să vă ajutăm, dar vă rugăm să aveți răbdare. 😌🙏
 
 🤝 Mulțumim de colaborare și un final de săptămână liniștit! 🙏🤍
 
@@ -192,9 +210,17 @@ WOLT_MESSAGE_1 = """
 
 📌 Așadar, asigurați-vă că aveți balanța numerar pe 0 înainte de resetare, ca să nu existe probleme și confuzii. 👌✌️
 
-✅ Puteți face depunerea direct prin <a href="https://youtube.com/shorts/p_dF5jPabLc?feature=share">Aircash</a> (actualizare instantă). Dacă întâmpinați dificultăți cu depunerea, contactați asistența din aplicație -/- scrieți pe grupul Wolt sau Suport General -/- cereți ajutorul unui helper.
+✅ Puteți face depunerea direct prin <a href="https://youtube.com/shorts/p_dF5jPabLc?feature=share">Aircash</a> (actualizare instantă).
 
-📅 Țineți minte calendarul la Wolt pe care se calculează fiecare săptămână fiscală a lunii: <b>01–07 | 08–15 | 16–22 | 23–ultima zi a lunii</b>. Zilele în care se dă reset sunt în următorul format calendaristic, lună de lună: <b>07, 15, 22 și ultima zi a lunii (28/29/30/31)</b>, la încheierea zilei <b>(23:59)</b>.
+🗣️ Dacă întâmpinați dificultăți cu depunerea:
+
+1. Contactați asistența din aplicație -/- dacă asistența nu vă ajută 👇
+2. scrieți pe grupul Bolt/Suport General -/- dacă nici așa 👇
+3. cereți ajutorul unui helper. Suntem aici să vă ajutăm, dar vă rugăm să aveți răbdare. 😌🙏
+
+📅 Țineți minte calendarul la Wolt pe care se calculează fiecare săptămână fiscală a lunii: <b>01–07 | 08–15 | 16–22 | 23–ultima zi a lunii</b>.
+
+🔄 Zilele de reset la Wolt (în care trebuie să încheiați cu balanța pe 0) sunt în următorul format calendaristic, lună de lună: <b>07, 15, 22 și ultima zi a lunii (28/29/30/31)</b>, la încheierea zilei <b>(ora 23:59)</b>.
 
 ✋ Încă un lucru important de reținut (știm, v-au zăpăcit și pe voi, și pe noi 😅): La Wolt, în zilele 8-16-23 și în <b>prima zi a lunii următoare</b> (cu o zi după reset) nu faceți nicio depunere, altfel se trage de două ori (și din raport, și depunerea voastră).
 
