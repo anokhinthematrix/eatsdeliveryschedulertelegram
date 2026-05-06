@@ -160,7 +160,7 @@ GLOVO_MESSAGE_1 = """
 
 🔄 <b>Tonight at 23:59 the cash balance on Glovo will be reset, after which a new fiscal week begins. 📈</b> 💱️
 
-⚠ Any amount <b>NOT</b> covered by <b>23:59</b> <i>(midnight to Monday)</i> will be deducted from the next report (<u><b>taxable money</b></u>) - 👎
+⚠ Any amount remaining in the balance at 23:59 (midnight into the next day) will be deducted from the next report (taxable income), and couriers with outstanding balances may lose order priority - 👎
 
 📌 Therefore, make sure your cash balance is 0 before the reset, so there are no issues or confusion. 👌✌️
 
@@ -237,7 +237,7 @@ WOLT_MESSAGE_1 = """
 
 🔄 Zilele de reset la Wolt (în care trebuie să încheiați cu balanța pe 0) sunt în următorul format calendaristic, lună de lună: <b>07, 15, 22 și ultima zi a lunii (28/29/30/31)</b>, la încheierea zilei <b>(ora 23:59)</b>.
 
-✋ Încă un lucru important de reținut (știm, v-au zăpăcit și pe voi, și pe noi 😅): La Wolt, în zilele 8-16-23 și în <b>prima zi a lunii următoare</b> (cu o zi după reset) nu faceți nicio depunere, altfel se trage de două ori (și din raport, și depunerea voastră).
+✋ Încă un lucru important de reținut (știm, v-au zăpăcit și pe voi, și pe noi 😅): La Wolt, în zilele 1-8-16-23 (ziua următoare după reset) nu faceți nicio depunere, altfel se trage de două ori (și din raport, și depunerea voastră).
 
 🤝 Mulțumim de colaborare și o zi cu spor! 🙏🤍
 
@@ -247,7 +247,7 @@ WOLT_MESSAGE_1 = """
 
 🔄 <b>Tonight at 23:59 the cash balance on Wolt will be reset, after which a new fiscal week begins. 📈</b> 💱
 
-⚠ Any amount <b>NOT</b> covered by <b>23:59</b> <i>(midnight to the following day)</i> will be deducted from the next report (<u><b>taxable money</b></u>) - 👎
+⚠ Any amount remaining in the balance at 23:59 (midnight into the next day) will be deducted from the next report (taxable income), and couriers with outstanding balances may lose order priority - 👎
 
 📌 Therefore, make sure your cash balance is 0 before the reset, so there are no issues or confusion. 👌✌️
 
@@ -261,7 +261,7 @@ WOLT_MESSAGE_1 = """
 
 📅 Keep in mind the Wolt schedule used to calculate each fiscal week of the month: <b>01–07 | 08–15 | 16–22 | 23–last day of the month</b>. The reset days are: <b>07, 15, 22 and the last day of the month</b>, every month, at the end of the day <b>(23:59)</b>.
 
-✋ One more important thing to remember (we know, it’s confusing for both you and us 😅): At Wolt, on days 8-16-23 and on the <b>first day of the following month</b> (one day after the reset), do not make any deposit, otherwise it will be deducted twice (both from the report and your deposit).
+✋ One more important thing to remember (we know, it’s confusing for both you and us 😅): At Wolt, on days 01-08-16-23 (one day after the reset), do not make any deposit, otherwise it will be deducted twice (both from the report and your deposit).
 
 🤝 Thank you for your cooperation, and have a peaceful end of the week, or a productive one, according to your inner feeling! 🙏🤍
 """
@@ -274,6 +274,7 @@ Resetarea balanței cash la Wolt are loc la ora <b>23:59</b>, după care începe
 ❗ Dacă mai aveți sume nedepuse:
 ➡️ vor fi trase din următorul raport
 ➡️ <u><b>bani impozitabili</b></u> ❌
+➡️ <b>posibilă prioritate scăzută la comenzi temporar (până se rezolvă)</b>
 
 📌 <b>Asigurați-vă că:</b>
 • ați depus suma <b>integrală</b> până în ora <b>23:59</b>
@@ -294,6 +295,7 @@ The cash balance reset at Wolt takes place at <b>23:59</b>, after which a new fi
 ❗ If you still have a negative cash balance by the end of the day:
 ➡️ they will be deducted from the next report
 ➡️ <u><b>taxable money</b></u> ❌
+➡️ <b>posibilă prioritate scăzută la comenzi temporar (până se rezolvă)</b>
 
 📌 <b>Make sure that:</b>
 • you have deposited the <b>full amount</b> by <b>23:59</b>
